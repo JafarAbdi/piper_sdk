@@ -3054,6 +3054,20 @@ class C_PiperInterface_V2():
         msg = PiperMessage(type_=ArmMsgType.PiperMsgGripperTeachingPendantParamConfig, arm_gripper_teaching_param_config=gripper_teaching_pendant_param_config)
         self.__parser.EncodeMessage(msg, tx_can)
         self.__arm_can.SendCanMessage(tx_can.arbitration_id, tx_can.data)
+    
+    def ReqArmMoveToHome(self, mode:Literal[0, 1, 2]):
+        tx_can = Message()
+        tx_can.arbitration_id = 0x191
+        if mode == 0:
+            # 恢复主从臂模式
+            tx_can.data = [0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
+        elif mode == 1:
+            # 主臂回零
+            tx_can.data = [0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00]
+        elif mode == 2:
+            # 主从臂一起回零
+            tx_can.data = [0x01, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00]
+        self.__arm_can.SendCanMessage(tx_can.arbitration_id, tx_can.data)
 #----------------------------------------------------------------------------------
     def GetSDKJointLimitParam(self,
                            joint_name: Literal["j1", "j2", "j3", "j4", "j5", "j6"]):

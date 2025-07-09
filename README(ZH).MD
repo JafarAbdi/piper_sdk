@@ -16,8 +16,8 @@ Test:
 
 |说明 |文档|
 |---|---|
-|接口函数的详细说明|[Interface_V1 README](./asserts/V1/INTERFACE_V1.MD) <br> [Interface_V2 README](./asserts/V2/INTERFACE_V2.MD)|
-|机械臂DEMO|[`piper_sdk/demo/V1`](./piper_sdk/demo/V1/README.MD) <br> [`piper_sdk/demo/V2`](./piper_sdk/demo/V2/README.MD)|
+|接口函数的详细说明|[Interface_V2 README](./asserts/V2/INTERFACE_V2.MD)|
+|机械臂DEMO|[`piper_sdk/demo/V2`](./piper_sdk/demo/V2/README.MD)|
 |双臂的主从配置和读取数据|[double_piper](./asserts/double_piper.MD)|
 |使用pyQT5的开源UI|[Piper_sdk_ui](<https://github.com/agilexrobotics/Piper_sdk_ui.git>)|
 |CHANGELOG|[CHANGELOG](./CHANGELOG.MD)|
