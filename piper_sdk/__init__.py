@@ -15,7 +15,6 @@ __all__ = [
     'C_PiperForwardKinematics',
     'C_STD_CAN',
     'C_PiperInterface',
-    'C_PiperInterface_V1',
     'C_PiperInterface_V2',
     'PiperSDKVersion',
     'quat_convert_euler',
