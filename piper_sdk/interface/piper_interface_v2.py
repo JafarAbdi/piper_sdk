@@ -3055,7 +3055,7 @@ class C_PiperInterface_V2():
         self.__parser.EncodeMessage(msg, tx_can)
         self.__arm_can.SendCanMessage(tx_can.arbitration_id, tx_can.data)
     
-    def ReqArmMoveToHome(self, mode:Literal[0, 1, 2]):
+    def ReqMasterArmMoveToHome(self, mode:Literal[0, 1, 2]):
         tx_can = Message()
         tx_can.arbitration_id = 0x191
         if mode == 0:
